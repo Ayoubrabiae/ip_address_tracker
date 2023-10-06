@@ -28,7 +28,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Solution](https://your-solution-url.com)
+- Solution URL: [Solution](https://www.frontendmentor.io/solutions/ip-address-tracker-ioCrIAU-Ej)
 - Live Site URL: [Preview](https://ayoubrabiae.github.io/ip_address_tracker/)
 
 ## My process
