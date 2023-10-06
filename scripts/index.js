@@ -4,18 +4,18 @@ const submitBtn = document.querySelector('input+button');
 const ipAddressContainer = document.querySelector('.ip-address p');
 const locationContainer = document.querySelector('.location p');
 const timezoneContainer = document.querySelector('.timezone p');
-const ispContainer = document.querySelector('.isp p');
+const zipCodeContainer = document.querySelector('.zipCode p');
 const searchContainer = document.querySelector('.search-input');
 
 const fillInfo = (info) => {
   const {
-    ip, location, timezone, isp,
+    ip, location, timezone, zipCode,
   } = info;
 
   ipAddressContainer.textContent = ip;
   locationContainer.textContent = location;
   timezoneContainer.textContent = timezone;
-  ispContainer.textContent = isp;
+  zipCodeContainer.textContent = zipCode;
 };
 
 const createMap = (lat, lon) => {
@@ -46,15 +46,15 @@ const createMap = (lat, lon) => {
 
 const getLocation = async (ipAddress = '') => {
   try {
-    const response = await fetch(`http://ip-api.com/json/${ipAddress}`);
+    const response = await fetch(`https://freeipapi.com/api/json/${ipAddress}`);
     const locationData = await response.json();
     return {
-      latitude: locationData.lat,
-      longitude: locationData.lon,
-      ip: locationData.query,
-      location: locationData.regionName,
-      timezone: locationData.timezone,
-      isp: locationData.isp,
+      latitude: locationData.latitude,
+      longitude: locationData.longitude,
+      ip: locationData.ipAddress,
+      location: locationData.cityName,
+      timezone: locationData.timeZone,
+      zipCode: locationData.zipCode,
     };
   } catch (error) {
     return { latitude: 0, longitude: 0 };
