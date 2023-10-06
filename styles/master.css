@@ -34,14 +34,14 @@ a {
 }
 
 .app .info-container {
-    background-image: url(../../images/pattern-bg-desktop.png);
+    background-image: url(../images/pattern-bg-desktop.png);
     background-size: cover;
     height: calc(100vh / 10 * 3.5);
 }
 
 @media (max-width: 767px) {
     .app .info-container {
-        background-image: url(../../images/pattern-bg-mobile.png);
+        background-image: url(../images/pattern-bg-mobile.png);
     }
 }
 
